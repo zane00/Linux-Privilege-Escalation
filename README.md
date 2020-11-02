@@ -1,4 +1,4 @@
-# Linux-Privilege-Escalation
+# Linux Privilege Escalation
 
 In questa repository verranno elencate tutte le tecniche di privilege escalation nei sistemi Linux a mia conoscenza.
 Verrà utilizzata come archivio del mio apprendimento ed eventualmente come fonte di studio per altri.
