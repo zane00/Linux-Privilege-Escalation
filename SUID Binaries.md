@@ -2,7 +2,8 @@
 
 ## Introduzione
 
-SUID (Setu User ID) è una tipologia di permesso che viene affidato ad un file e permette agli utenti di eseguirlo con i permessi dell'utente proprieratio (oltre ai propri).\
+SUID (Setu User ID) è una tipologia di permesso che viene affidato ad un file.
+Permette agli utenti di eseguirlo con i permessi dell'utente proprieratio (oltre ai propri).\
 Possiamo identificare che un eseguibile è stato settato con il SUID guardando semplicemente i 3 bit dell'utente nei bit
 `rwx`.
 
@@ -24,7 +25,7 @@ illegale.***
 
 Per trovare i file con il SUID basta digitare il seguente comando:
 
-`find / -pem -u=s -type f 2>/dev/null`
+`find / -perm -u=s -type f 2>/dev/null`
 
 Facciamo un po' di chiarezza sulla sintassi del comando:
   * `/` indica che la ricerca partirà dalla cartella root
@@ -33,7 +34,7 @@ Facciamo un po' di chiarezza sulla sintassi del comando:
   * `-type` permette di indicare la tipologia di file che vogliamo cercare
   * `f` sta ad indicare che vogliamo ricercare file "regolari", quindi non direcotry o file speciali
   * `>` usato per indicare la direzione
-  * `/dev/null` è un oggetto filesystem speciale che scarta ogni cosa scritta al suo interno
+  * `/dev/null` è un filesystem speciale che scarta ogni cosa scritta al suo interno
   
 ## Funzionamento del SUID
 
